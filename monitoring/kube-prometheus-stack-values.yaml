@@ -1,0 +1,12 @@
+grafana:
+  enabled: true
+  adminPassword: "CHANGE_ME_BEFORE_INSTALL"
+  service:
+    type: ClusterIP
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
+    serviceMonitorNamespaceSelector: {}
+    serviceMonitorSelector: {}
+alertmanager:
+  enabled: true

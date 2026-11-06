@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: employee-api
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus,metrics
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+info:
+  app:
+    name: Employee API
+    version: 1.0.0
